@@ -1,5 +1,8 @@
 <h1 align="center">Stock Dashboard App Details</h1>
 
+## Description
+The Stock Dashboard App is a user-friendly interface designed for managing stock data efficiently. It allows users to view, filter, and interact with stock information seamlessly. The application features a mock backend to simulate stock operations for a smooth experience.
+
 ## Running Application Locally
 
 Clone the repo:
