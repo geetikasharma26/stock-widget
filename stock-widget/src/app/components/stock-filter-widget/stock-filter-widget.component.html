@@ -1,0 +1,20 @@
+<form [formGroup]="stocksForm" class="mb-3 row d-flex justify-content-end" aria-labelledby="tagFilterLabel">
+    <label
+      id="tagFilterLabel"
+      for="tagFilter"
+      class="col-form-label col-sm-1"
+      >Tag Filter:</label
+    >
+    <div class="col-sm-3">
+      <select
+        id="tagFilter"
+        class="form-select"
+        formControlName="tagFilter"
+        (change)="onTagChange()"
+        aria-describedby="tagFilterDesc"
+      >
+        <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+      </select>
+      <span id="tagFilterDesc" class="visually-hidden">Select a tag to filter the list</span>
+    </div>
+  </form>

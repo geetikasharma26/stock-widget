@@ -1,0 +1,71 @@
+<div
+class="table-responsive"
+role="region"
+aria-labelledby="stocksListHeading"
+>
+<table
+  class="table table-bordered table-hover"
+  aria-describedby="tableInstructions"
+>
+  <caption id="tableInstructions" class="visually-hidden">
+    Click on the symbol link to view stock details. Press 'X' to remove a
+    stock from the list.
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Last Price</th>
+      <th scope="col">Tag</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of stocks; let i = index">
+      <td>
+        <a
+          href="#"
+          (click)="selectStockSymbol(stock); $event.preventDefault()"
+          [attr.aria-label]="
+            'View details for ' +
+            stock.name +
+            ' with symbol ' +
+            stock.symbol
+          "
+        >
+          {{ stock.symbol }}
+        </a>
+      </td>
+      <td>{{ stock.lastPrice | currency }}</td>
+      <td>{{ stock.tag }}</td>
+      <td>
+        <button
+          (click)="deleteSelectedStock(stock)"
+          class="delete-icon"
+          [attr.aria-label]="
+            'Delete stock ' + stock.name + ' with symbol ' + stock.symbol
+          "
+        >
+          X
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="custom-modal" #customModal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5>Confirm Deletion</h5>
+      <button class="close-btn" (click)="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      Are you sure you want to delete this stock?
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" (click)="closeModal()">Cancel</button>
+      <button class="btn-confirm" (click)="confirmDelete()">Delete</button>
+    </div>
+  </div>
+</div>

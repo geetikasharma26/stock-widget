@@ -1,0 +1,164 @@
+
+.table th,
+.table td {
+    text-align: center; /* Center aligns both header and data cells */
+    vertical-align: middle; /* Vertically centers content */
+}
+
+.table th {
+    background-color: #343a40; /* Dark gray background for header */
+    color: white; /* White text for header */
+}
+
+.table a {
+    text-decoration: none; /* Removes underline from anchor tags */
+}
+
+.delete-icon {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #dc3545; /* Bootstrap red color for delete */
+    font-size: 1rem; /* Adjusted size to make it smaller */
+    cursor: pointer; /* Pointer cursor on hover */
+    line-height: 1; /* Center align vertically */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color transition */
+    padding: 0.2rem 0.5rem; /* Add some padding for better click area */
+    border-radius: 0.25rem; /* Slight rounding for a better look */
+  }
+  
+  .delete-icon:hover {
+    color: #a71c1c; /* Darker red on hover */
+    background-color: rgba(128, 128, 128, 0.2); /* Light gray background on hover */
+  }
+  
+  .delete-icon:focus {
+    outline: 2px solid #007bff; /* Focus outline for accessibility */
+    outline-offset: 2px; /* Space between outline and button */
+  }
+  
+  .delete-icon:active {
+    transform: scale(0.95); /* Slightly shrink the icon on click */
+  }
+
+/* stock-widget.component.scss */
+
+/* Modal background (darker, with animation) */
+.custom-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Darker overlay */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Start hidden */
+  z-index: 1000; /* Make sure it’s on top */
+}
+
+/* Show modal when class 'show' is added */
+.custom-modal.show {
+  display: flex;
+  opacity: 1; /* Fade in the modal */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 400px;
+  max-width: 90%; /* Responsive on smaller screens */
+  animation: slideDown 0.4s ease; /* Slide-down effect */
+}
+
+/* Modal slide-down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+/* Modal title */
+.modal-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Modal body */
+.modal-body p {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Modal footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Button styles */
+.btn {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.btn-cancel {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.btn-cancel:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-confirm {
+  background-color: #e74c3c; /* Red color for delete */
+  color: white;
+  border: none;
+}
+
+.btn-confirm:hover {
+  background-color: #c0392b;
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}

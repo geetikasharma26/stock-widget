@@ -1,0 +1,6 @@
+<h3 class="centered-heading"> Stock Dashboard</h3>
+<div container>
+<app-stock-filter-widget (updatedTag)="onTagChange($event)"></app-stock-filter-widget>
+<app-stock-table-widget [stocks]="(filteredStocks$ | async) || []" (selectedStock)="onSelectedStock($event)" (deleteStock)="deleteStock($event)"></app-stock-table-widget>
+<app-stock-details-widget [stock]="selectedStock$ | async"></app-stock-details-widget>
+</div>

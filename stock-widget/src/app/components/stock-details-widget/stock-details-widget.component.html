@@ -1,0 +1,24 @@
+<div *ngIf="stock" class="card mt-4 shadow">
+    <div class="card-body">
+      <h5 class="card-title">Stock Details</h5>
+      <div class="d-flex gap-5">
+        <div class="d-flex flex-column">
+          <p class="card-text">
+            <strong>Symbol:</strong> {{ stock.symbol }}
+          </p>
+          <p class="card-text">
+            <strong>Market Cap:</strong> {{ stock.marketCap | currency }}
+          </p>
+        </div>
+        <div class="d-flex flex-column">
+          <p class="card-text">
+            <strong>Name:</strong> {{ stock.name }}
+          </p>
+          <p class="card-text">
+            <strong>Tag:</strong> {{ stock.tag }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
