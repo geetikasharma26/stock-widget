@@ -8,6 +8,11 @@ Clone the repo:
 git clone https://github.com/geetikasharma26/stock-widget.git
 ```
 
+Navigate to the project directory:
+```
+cd stock-widget
+```
+
 Install NPM Packages:
 
 ```
@@ -20,7 +25,12 @@ To serve the mock backend using json-server, you'll need to install it globally:
 ```
 npm install -g json-server
 ```
-Once installed, start the mock server by executing:
+
+Navigate to the project directory in another terminal:
+```
+cd stock-widget
+```
+Start the mock server by executing:
 ```
 npm start backend:mock
 ```
