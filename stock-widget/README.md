@@ -1,6 +1,6 @@
 <h1 align="center">Stock Dashboard App Details</h1>
 
-## Running the application
+## Running Application Locally
 
 Clone the repo:
 
@@ -46,13 +46,13 @@ npm start
 This will compile the application and open it in your default web browser at http://localhost:4200.
 
 
-**Major Features**
+**Major Features**:
 View Stocks: Displays a list of stocks with details.
 Filter Stocks: Allows users to filter stocks by tags.
 View Stock Details: Click on a stock to view its detailed information.
 Delete Stocks: Remove stocks from the list, with confirmation modal.
 
-**API Endpoints**
+**API Endpoints**:
 The following API endpoints are available when running the mock backend:
 
 GET /stocks: Retrieve all stocks.
