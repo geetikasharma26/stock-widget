@@ -45,18 +45,16 @@ npm start
 
 This will compile the application and open it in your default web browser at http://localhost:4200.
 
+## Major Features:
+- View Stocks: Displays a list of stocks with details.
+- Filter Stocks: Allows users to filter stocks by tags.
+- View Stock Details: Click on a stock to view its detailed information.
+- Delete Stocks: Remove stocks from the list, with confirmation modal.
 
-**Major Features**:
-View Stocks: Displays a list of stocks with details.
-Filter Stocks: Allows users to filter stocks by tags.
-View Stock Details: Click on a stock to view its detailed information.
-Delete Stocks: Remove stocks from the list, with confirmation modal.
+## API EndPoints:
+- The following API endpoints are available when running the mock backend:
 
-**API Endpoints**:
-The following API endpoints are available when running the mock backend:
-
-GET /stocks: Retrieve all stocks.
-GET /stocks?tag=$Tag Retrieve all stocks for which tag matches
-POST /stocks: Add a new stock entry.
-DELETE /stocks/
-: Delete a stock by ID.
+- GET /stocks: Retrieve all stocks.
+- GET /stocks?tag=$Tag Retrieve all stocks for which tag matches
+- POST /stocks: Add a new stock entry.
+- DELETE /stocks/ : Delete a stock by ID.
